@@ -1,0 +1,13 @@
+/* Global */
+@import url("base.css");
+
+/* Layout */
+@import url("navbar.css");
+@import url("footer.css");
+
+/* Pages */
+@import url("home.css");
+@import url("services.css");
+@import url("team.css");
+@import url("portfolio.css");
+@import url("contact.css");

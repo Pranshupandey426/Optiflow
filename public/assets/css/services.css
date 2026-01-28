@@ -1,0 +1,438 @@
+/* =========================================
+   GLOBAL RESET & THEME
+========================================= */
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+:root {
+  --bg-dark: #050505;
+  --bg-card: #111111;
+  --yellow: #facc15;
+  --orange: #f37021;
+  --text-light: #ffffff;
+  --text-muted: #cfcfcf;
+  --border-soft: rgba(255,255,255,0.08);
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.custom-navbar {
+  background: #050505;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.navbar-brand img {
+  max-height: 42px;
+  width: auto;
+}
+
+.navbar-dark .nav-link {
+  color: var(--text-light);
+}
+
+.navbar-dark .nav-link.active,
+.navbar-dark .nav-link:hover {
+  color: var(--yellow);
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero-section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-image: url('/assets/images/Gemini_Generated_Image_cvy4xocvy4xocvy4.png');
+  position: relative;
+  padding-top: 80px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+}
+
+.hero-title {
+  font-size: clamp(48px, 10vw, 120px);
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+.hero-text {
+  max-width: 800px;
+  margin: auto;
+  color: var(--text-dark);
+  font-size: clamp(14px, 2.5vw, 18px);
+}
+
+/* =========================================
+   AWARD CARDS
+========================================= */
+
+.award-card {
+  background: var(--bg-card);
+  border-radius: 18px;
+  padding: 28px;
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+  color: var(--text-light);
+}
+
+.award-card:hover {
+  transform: translateY(-6px);
+}
+
+.award-card p {
+  color: var(--text-muted);
+}
+
+/* =========================================
+   EVENT / SERVICE CARDS
+========================================= */
+
+.event-card {
+  border-radius: 18px;
+  overflow: hidden;
+  background: var(--bg-card);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+
+.event-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================================
+   OUR STORY
+========================================= */
+
+.our-story {
+  padding: 100px 20px;
+  background: var(--bg-dark);
+  color: var(--text-light);
+}
+
+.our-story h1 {
+  text-align: center;
+  font-size: clamp(36px, 6vw, 64px);
+  margin-bottom: 60px;
+}
+
+.story-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.story-content .left {
+  flex: 1;
+}
+
+.story-content .left h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.story-content .right {
+  flex: 1;
+}
+
+.story-content .right p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+.story-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+/* =========================================
+   NEED US SECTION
+========================================= */
+
+.need {
+  padding: 80px 20px;
+  background: var(--bg-card);
+  color: var(--text-light);
+  text-align: center;
+}
+
+.need h1 {
+  font-size: clamp(36px, 6vw, 72px);
+}
+
+.need p {
+  max-width: 900px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.highlight {
+  color: var(--yellow);
+  font-weight: 600;
+}
+
+/* =========================================
+   IMAGE GRID (TEAM / EVENTS)
+========================================= */
+
+.img-box {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* =========================================
+   GET IN TOUCH
+========================================= */
+
+.get-touch {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 15px;
+  background: var(--bg-dark);
+}
+
+.get-touch h1 span {
+  display: block;
+  font-size: clamp(48px, 10vw, 120px);
+  color: var(--text-light);
+}
+
+.get-touch p {
+  max-width: 750px;
+  margin: 30px auto;
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: var(--text-muted);
+}
+
+.btn-orange {
+  background-color: var(--orange);
+  color: #fff;
+  padding: 14px 32px;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-orange:hover {
+  background-color: #d85f1a;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer-section {
+  padding: 60px 15px;
+  background: var(--bg-card);
+  color: var(--text-light);
+}
+
+.footer-title {
+  color: var(--yellow);
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.footer-links a:hover {
+  color: var(--yellow);
+}
+
+.connect-text {
+  color: var(--yellow);
+  font-weight: 600;
+}
+
+.social-icons a {
+  font-size: 24px;
+  color: var(--text-light);
+  margin-right: 20px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: var(--yellow);
+}
+
+.newsletter-box {
+  background: var(--orange);
+  border-radius: 20px;
+  padding: 35px;
+  color: #fff;
+}
+
+.newsletter-btn {
+  background: #000;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.footer-divider {
+  border-top: 1px solid var(--border-soft);
+  margin: 50px 0 20px;
+}
+
+/* =========================================
+   RESPONSIVE FIXES
+========================================= */
+
+@media (max-width: 768px) {
+  .story-content {
+    flex-direction: column;
+  }
+
+  .need h1 {
+    font-size: 40px;
+  }
+}
+/* ===============================
+   SERVICES SHOWCASE – FIXED
+================================ */
+
+.services-showcase {
+  background: #050505; /* SAME as whole site */
+  padding: 120px 20px;
+  color: #ffffff;
+}
+
+/* Section Title */
+.services-showcase .section-title {
+  text-align: center;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  margin-bottom: 70px;
+}
+
+.services-showcase .section-title span {
+  color: #facc15;
+}
+
+/* Grid */
+.services-grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+.service-card {
+  background: #111111;
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 360px;              /* 🔥 SAME HEIGHT */
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+/* Hover */
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 70px rgba(250, 204, 21, 0.15);
+}
+
+/* Image Wrapper */
+.service-image {
+  height: 260px;              /* 🔥 SAME IMAGE AREA */
+  width: 100%;
+  background: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Image */
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* 🔥 FIXED IMAGE FIT */
+  display: block;
+}
+
+/* Title */
+.service-card h3 {
+  padding: 16px 18px;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+  background: #111111;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    height: auto;
+  }
+
+  .service-image {
+    height: 220px;
+  }
+}

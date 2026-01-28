@@ -1,0 +1,212 @@
+/* =========================================
+   PORTFOLIO BANNER – IMAGE SAFE FIX
+========================================= */
+
+.portfolio-banner {
+    position: relative;
+    /* This pulls the banner to the very top of the page */
+    margin-top: -80px; /* Adjust this value to match your navbar height */
+    padding-top: 80px; 
+    
+    background-image: url('/assets/images/portfoliobanner.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; /* 'cover' usually looks better for hero sections */
+    background-color: #0b0f2a;
+
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+/* Ensure the navbar is on top of the banner */
+.navbar {
+    position: relative;
+    z-index: 10;
+    background: transparent !important; /* Make it transparent to see the banner behind it */
+}
+/* Overlay text positioning */
+.banner-overlay {
+    position: absolute;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+}
+
+.banner-overlay h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    letter-spacing: 4px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   SECTION STYLES
+========================================= */
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #222;
+}
+
+.section-divider {
+    width: 10%;
+    margin: 40px auto;
+    border-top: 3px solid #000;
+    opacity: 1;
+}
+
+/* =========================================
+   VIDEO GRID LAYOUT
+========================================= */
+
+.video-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* =========================================
+   ELECTRIC VIDEO CARD STYLING
+========================================= */
+
+.video-card {
+    position: relative;
+    flex: 1;
+    min-width: 200px;
+    max-width: 260px;
+    height: 450px;
+    background: #000;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 3px; /* This creates the border thickness */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    
+    /* Animation from your existing code */
+    animation: fadeUp 1s ease-out both;
+}
+
+.video-card:hover {
+    transform: translateY(-15px) scale(1.02);
+}
+
+/* The Animated Electric Line */
+.electric-border {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent, 
+        #facc15, /* Yellow Spark */
+        #ff4757, /* Red Edge */
+        transparent 30%
+    );
+    animation: rotateElectric 3s linear infinite;
+    z-index: 1;
+}
+
+/* The Outer Glow Effect */
+.electric-glow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: conic-gradient(
+        transparent, 
+        #facc15, 
+        #ff4757, 
+        transparent 30%
+    );
+    filter: blur(15px); /* Creates the "Dramatic" glow */
+    animation: rotateElectric 3s linear infinite;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+/* Inner Container to hold video and hide the center of the gradient */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000; /* Keeps center dark */
+    border-radius: 18px;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.card-inner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Rotation Keyframes for the Electric Effect */
+@keyframes rotateElectric {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 576px) {
+    .video-card {
+        height: 380px;
+        max-width: 100%;
+    }
+}
+
+/* =========================================
+   FADE UP KEYFRAMES
+========================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* =========================================
+   STAGGER ANIMATION (OPTIONAL)
+========================================= */
+
+.video-card:nth-child(1) { animation-delay: 0.1s; }
+.video-card:nth-child(2) { animation-delay: 0.2s; }
+.video-card:nth-child(3) { animation-delay: 0.3s; }
+.video-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* =========================================
+   RESPONSIVE STYLES
+========================================= */
+
+@media (max-width: 992px) {
+    .video-card {
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .video-card {
+        max-width: 100%;
+    }
+
+    .video-card video {
+        height: 380px;
+    }
+}

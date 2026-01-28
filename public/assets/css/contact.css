@@ -1,0 +1,297 @@
+/* =========================================
+   CONTACT PAGE STYLES (FULLY RESPONSIVE)
+========================================= */
+
+.contact-section {
+    background: #050505;
+    padding: clamp(60px, 8vw, 120px) 16px;
+    color: #ffffff;
+}
+
+/* Main Layout */
+.contact-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: flex-start;
+}
+
+/* =========================================
+   LEFT SIDE – VISUAL
+========================================= */
+
+.contact-visual {
+    flex: 1;
+    position: sticky;
+    top: 120px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contact-visual {
+    flex: 1;
+    position: sticky;
+    top: 120px;
+    height: 100%; /* Important for vertical centering */
+    display: flex;
+    justify-content: center;
+}
+
+.orbit-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.orbit-container p {
+    /* Vertical Text Logic */
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    
+    /* Font Styling */
+    font-size: clamp(20px, 6vw, 40px); /* Very big and responsive */
+    font-weight: 900;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0;
+    white-space: nowrap;
+    
+    /* Optional: Subtle Brand Accent */
+    background: linear-gradient(to bottom, #ffffff, #27272a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.9;
+}
+/* =========================================
+   SOCIAL LINKS
+========================================= */
+
+.social-links {
+    margin-top: 40px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #a1a1aa;
+    text-decoration: none;
+    margin-bottom: 18px;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #facc15;
+}
+
+/* =========================================
+   RIGHT SIDE – FORM
+========================================= */
+
+.contact-form-box {
+    flex: 1.5;
+    background: #0a0a0a;
+    padding: clamp(24px, 4vw, 40px);
+    border-radius: 24px;
+    border: 1px solid #1f1f23;
+}
+
+/* Header */
+.form-header h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: #a1a1aa;
+    margin-bottom: clamp(24px, 4vw, 40px);
+    font-size: 15px;
+}
+
+/* Form Rows */
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+/* Inputs */
+.input-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #facc15;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+    background: #121214;
+    border: 1px solid #27272a;
+    border-radius: 10px;
+    padding: 14px 14px;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    border-color: #facc15;
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    font-size: 13px;
+    color: #a1a1aa;
+}
+
+.checkbox-group a {
+    color: #facc15;
+    text-decoration: none;
+}
+
+/* Send Button */
+.btn-send {
+    width: 100%;
+    background: #7f56d9;
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-send:hover {
+    background: #6941c6;
+    transform: translateY(-2px);
+}
+
+/* =========================================
+   PARTNER LOGOS
+========================================= */
+
+.partner-logos {
+    display: flex;
+    gap: 26px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid #1f1f23;
+    justify-content: center;
+}
+
+.partner-logos a {
+    color: #a1a1aa;
+    font-size: 22px;
+    transition: all 0.3s ease;
+}
+
+.partner-logos a:hover {
+    color: #facc15;
+    transform: translateY(-4px);
+}
+
+
+/* =========================================
+   RESPONSIVE BREAKPOINTS
+========================================= */
+
+/* Tablets */
+@media (max-width: 992px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-visual {
+        position: static;
+        order: 2;
+        margin-top: 40px;
+    }
+
+    .orbit-container {
+        max-width: 300px;
+    }
+
+    .contact-form-box {
+        width: 100%;
+        order: 1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .orbit-container {
+        max-width: 240px;
+    }
+
+    .btn-send {
+        font-size: 15px;
+        padding: 14px;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1600px) {
+    .contact-container {
+        max-width: 1400px;
+    }
+
+    .orbit-container {
+        max-width: 460px;
+    }
+}
+/* =========================================
+   RESPONSIVE FIX FOR VERTICAL TEXT
+========================================= */
+
+@media (max-width: 992px) {
+    .contact-visual {
+        position: static;
+        order: 2;
+        margin-top: 60px;
+        height: auto;
+    }
+
+    .orbit-container p {
+        /* Switch back to horizontal on tablets/mobile */
+        writing-mode: horizontal-tb;
+        transform: rotate(0deg);
+        font-size: clamp(32px, 8vw, 48px);
+        text-align: center;
+        white-space: normal;
+    }
+}
