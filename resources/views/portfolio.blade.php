@@ -28,9 +28,9 @@ $portfolio = [
         'type' => 'video',
         'items' => [
             'website-laptop-video-1_jpLg6bZD.mp4',
-            'web2.mp4',
-            'web3.mp4',
-            'web4.mp4',
+            'laptop 5.mp4',
+            'laptop 6.mp4',
+            'laptop 7.mp4',
         ]
     ],
 
@@ -67,8 +67,8 @@ $portfolio = [
     'Software Development' => [
         'type' => 'video',
         'items' => [
-            'soft1.mp4',
-            'soft2.mp4',
+            'laptop 2.mp4',
+            'laptop 3.mp4',
             'soft3.mp4',
             'soft4.mp4',
         ]
